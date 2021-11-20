@@ -771,11 +771,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'drupal_govt_policy',
-  'username' => 'root',
-  'password' => '',
+  'database' => $_ENV['DBASE'],
+  'username' => $_ENV['USER'],
+  'password' => $_ENV['PASS'],
   'prefix' => '',
-  'host' => 'localhost',
+  'host' => $_ENV['HOST'],
   'port' => '',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
